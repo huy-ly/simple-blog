@@ -18,3 +18,9 @@ h1 {
 a {
     color: #d23669;
 }
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 42rem;
+}
