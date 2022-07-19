@@ -18,7 +18,6 @@ header{
     max-width: 42rem;
     margin: 0 auto;
     padding: 2.625rem 1.3125rem;
-    background-color:aqua;
 }
 
 .header{
@@ -32,7 +31,7 @@ h1{
     font-size: 1.98818rem;
 }
 .darkmode{
-    width: 55px;
+    width: fit-content;
     height: 24px;
     padding: 0;
     border-radius: 30px;
@@ -42,21 +41,53 @@ h1{
     display:flex;
     align-items:center;
     cursor:pointer;
-    justify-content: center;
+    /* justify-content: center; */
     
+}
+.darkmode div{
+    /* position:relative; */
+    z-index:0;
 }
 .sun,.moon{
     color: yellow;
-    width:20px;
+    width:18px;
+    z-index:1;
+    margin-left:2.5px;
+    margin-right:2.5px;
 }
+
 .circle{
-    width:26px;
-    height:26px;
+    width:22px;
+    height:22px;
     border-radius:100%;
     position:absolute;
     top:0px;
-    left:-2px;
     background-color:white;
-    outline-color:pink;
+    border: 1px solid #000;
     z-index:99;
+}
+.right0{
+    position:absolute;
+    top:0px;
+    right:0px;
+}
+.img-avatar{
+    width:60px;
+    height:60px;
+    overflow: hidden;
+    border-radius:100%;
+}
+.img-avatar img{
+width:100%;
+height:auto;
+background-position:center
+}
+.about h3{
+    font-weight:500;
+}
+.bg{
+    background-color: #282c35;
+}
+.text-white{
+    color:white;
 }
