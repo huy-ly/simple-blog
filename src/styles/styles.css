@@ -1,12 +1,22 @@
+html {
+    font: 100%/1.75'Merriweather','Georgia',serif;
+}
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
 
-.header {
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.blog-title {
     box-shadow: none;
     text-decoration: none;
     font-size: 1.98818rem;
     line-height: 2.625rem;
+    color: #222;    
 }
 
 h1 {
@@ -24,4 +34,114 @@ a {
     margin-left: auto;
     margin-right: auto;
     max-width: 42rem;
+}
+
+.toggle { 
+    touch-action: pan-x;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    background-color: transparent;
+    border: 0;
+    padding: 0;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-tap-highlight-color: transparent; 
+}
+
+.toggle-track{
+    width: 50px;
+    height: 24px;
+    padding: 0;
+    border-radius: 30px;
+    background-color: #0f1114;
+    transition: all .2s ease;
+}
+
+.toggle-track-check{
+    position: absolute;
+    width: 17px;
+    height: 17px;
+    left: 5px;
+    top: 0;
+    bottom: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+    line-height: 0;
+    opacity: 0;
+    transition: opacity .25s ease;
+}
+
+.toggle-track-x{
+    position: absolute;
+    width: 17px;
+    height: 17px;
+    right: 5px;
+    top: 0;
+    bottom: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+    line-height: 0;
+}
+
+.toggle-thumb{
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background-color: #fafafa;
+    box-sizing: border-box;
+    transition: all .5s cubic-bezier(.23,1,.32,1) 0ms;
+    transform: translateX(0);
+}
+
+.toggle-screenreader-only{
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.aside-container{
+    display: flex;
+}
+
+.profile-image{
+    margin-right: 0.875rem;
+    margin-bottom: 0;
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+}
+
+img {
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    margin-bottom: 1.75rem;
+}
+
+p {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    margin-bottom: 1.75rem;
 }
