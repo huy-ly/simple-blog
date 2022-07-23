@@ -2,10 +2,18 @@ html {
     font: 100%/1.75'Merriweather','Georgia',serif;
 }
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+    font-family: 'Merriweather','Georgia',serif;
 }
 
-header {
+@font-face{
+    font-display:swap;
+    font-family:Merriweather;
+    font-style:italic;
+    font-weight:400;
+    src:url(https://overreacted.io/static/merriweather-400-l-8796b7875d52e9cb9b280211e8d3f82d.woff2)
+}
+
+.blog-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -145,3 +153,18 @@ p {
     padding-top: 0;
     margin-bottom: 1.75rem;
 }
+
+.post-title{
+    font-family: Montserrat, sans-serif;
+    font-size: 1.75rem;
+    margin-bottom: 0.4375rem;
+    color: #d23669;
+    font-weight: 900;
+    text-rendering: optimizeLegibility;
+    line-height: 1.1;
+}
+
+.post-title a{
+    text-decoration: none;
+}
+
