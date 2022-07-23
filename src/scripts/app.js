@@ -19,6 +19,9 @@ function turnRight(){
     })
     p.classList.toggle("text-white")
 }
-
+// var cursorPointer = document.querySelector(".cursorPointer")
+// cursorPointer.onhover =()=>{
+//     cursorPoin
+// }
 
 
