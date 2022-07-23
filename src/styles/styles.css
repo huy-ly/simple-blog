@@ -1,7 +1,18 @@
+html{
+    margin: auto;
+    font: 100%/1.75 'Merriweather','Georgia',serif;
+}
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 header {
-    color: #d23669;
+    color: #000000;
     font-size: 28px;
+}
+body>header{
+    display: flex;
+
+}
+main h3{
+    color: red;
 }
