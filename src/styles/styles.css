@@ -167,3 +167,10 @@ p {
     text-decoration: none;
 }
 
+.post-header{
+    font-family: Montserrat, sans-serif;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    height: 42px;
+    line-height: 2.625rem;
+}
