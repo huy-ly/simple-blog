@@ -4,12 +4,12 @@ var h3s = document.querySelectorAll("h3")
 var circle = document.querySelector(".circle")
 var body = document.querySelector("body")
 var p = document.querySelector("p")
-circle.onclick = function(){
-    return turnRight()
-}
+// circle.onclick = function(){
+//     return turnRight()
+// }
 function turnRight(){
     circle.classList.toggle("right0")
-   
+   circle.classList.toggle("circle-border")
     body.classList.toggle("bg")
     h5s.forEach((h5)=>{
         h5.classList.toggle("text-white")
