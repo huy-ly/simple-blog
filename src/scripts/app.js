@@ -7,11 +7,3 @@ function changeTheme(){
     else bodyEl.className = "light";
      
 }
-
-function domLoaded(event) { 
-    var toggleBtn = document.getElementById("toggle-btn");
-
-    toggleBtn.onclick = changeTheme;
-}
-
-document.addEventListener("DOMContentLoaded", domLoaded);
