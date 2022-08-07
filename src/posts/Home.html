@@ -1,7 +1,7 @@
 <html>
     <head>
         <title>Dome Keeper</title>
-        <link rel="stylesheet" href="styles/styles.css">
+        <link rel="stylesheet" href="/src/styles/styles.css">
     </head>
     <body>
         <div class="container">
@@ -10,13 +10,14 @@
                 <button>Dark mode</button>
             </header>
             <main>
-                <img onclick="alert('Bap Ngu')" width="400" src="DOME.png">
+                <img onclick="alert('Bap Ngu')" width="400" src="/src/images/DOME.png">
                 <p>Personal blog by Tri Lee.</p>
                 <p>I explain with arrow buttons and mouse clicking.</p>
 
                 <div>
-                    <p><a href="./posts/post_1.html"> How to play? </a></p>
-                    <p><a href="./posts/post_2.html"> Play trial </a></p>
+                    <p><a href="post_1.html"> How to play? </a></p>
+                    <p><a href="post_2.html"> Play trial </a></p>
+                    <p><a href="post_3.html"> Play official </a></p>
                 </div>
 
             </main>
@@ -25,6 +26,11 @@
             </footer>
         </div>
         
-        <script src="scripts/home.js"></script>
+        <script>
+            const header = document.querySelector('.header')
+            setInterval(() => {
+                header.classList.toggle('header')
+            }, 1000);
+        </script>
     </body>
 </html>
