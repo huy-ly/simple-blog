@@ -1,7 +1,9 @@
 const grid = document.querySelector('.grid')
 const blockWidth = 100
 const blockHeight = 20
+
 const boardWidth = 560
+const boardHeight = 300
 
 const userStartPosition = [230, 10]
 let  userCurrentPosition = userStartPosition
@@ -66,32 +68,91 @@ function moveUser(e) {
         case 'ArrowLeft':          
             if (userCurrentPosition[0] > 0) {
                 userCurrentPosition[0] -= 10
-                drawUser(user, userCurrentPosition)
+                draw(user, userCurrentPosition)
             }
             break
 
         case 'ArrowRight':          
-        if (userCurrentPosition[0] < boardWidth - blockWidth) {
-            userCurrentPosition[0] += 10
-            drawUser(user, userCurrentPosition)
-        }
-        break
+            if (userCurrentPosition[0] < boardWidth - blockWidth) {
+                userCurrentPosition[0] += 10
+                draw(user, userCurrentPosition)
+            }
+            break
 
     }
 }
 document.addEventListener('keydown', moveUser)
 
 //add ball
+const ballDiameter = 20
 const ball = document.createElement('div')
 ball.classList.add('ball')
 draw(ball, ballCurrentPosition)
 grid.appendChild(ball)
 
+let xDirection = 2
+let yDirection = 2
 function moveBall() {
-    ballCurrentPosition[0] += 2
-    ballCurrentPosition[1] += 2
+    ballCurrentPosition[0] += xDirection
+    ballCurrentPosition[1] += yDirection
     draw(ball, ballCurrentPosition)
+    checkForCollisions()
 }
 
-// setInterval(moveBall, 20)
+timerId = setInterval(moveBall, 20)
 
+function checkForCollisions() {
+    //check for block collisions
+    
+
+    //check for wall collision
+    if (
+        ballCurrentPosition[0] >= (boardWidth - ballDiameter) ||
+        ballCurrentPosition[1] >= (boardHeight - ballDiameter) ||
+        ballCurrentPosition[0] <= 0
+    ) {
+        changeDirection()
+    }
+
+    //check for game over
+    if (ballCurrentPosition[1] <= 0) {
+        clearInterval(timerId)
+    }
+}
+function changeDirection() {
+    if (xDirection === 2 && yDirection === 2) {
+        xDirection = -2
+        return
+    }
+    if (xDirection === -2 && yDirection === 2) {
+        yDirection = -2
+        return
+    }
+    if (xDirection === -2 && yDirection === -2) {
+        xDirection = 2
+        return
+    }
+    if (xDirection === 2 && yDirection === -2) {
+        xDirection = -2
+        return
+    }
+}
+
+// function changeDirection() {
+//     if (xDirection === 2 && yDirection === 2) {
+//       yDirection = -2
+//       return
+//     }
+//     if (xDirection === 2 && yDirection === -2) {
+//       xDirection = -2
+//       return
+//     }
+//     if (xDirection === -2 && yDirection === -2) {
+//       yDirection = 2
+//       return
+//     }
+//     if (xDirection === -2 && yDirection === 2) {
+//       xDirection = 2
+//       return
+//     }
+//   }
