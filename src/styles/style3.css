@@ -1,33 +1,29 @@
 .grid {
-    width: 560px;
-    height: 300px;
-    border: 1px solid red ;
-
-    position: absolute;
-
-}
-
-.block {
-    width: 100px;
-    height: 20px;
-    background-color: blue ;
-
-    position: absolute;
+  position: absolute;
+  width: 560px;
+  height: 300px;
+  border: solid 1px black;
+  margin-top: 100px;
 }
 
 .user {
-    width: 100px;
-    height: 20px;
-    background-color: yellow ;
+  position: absolute;
+  width: 550px;
+  height: 20px;
+  background-color: blueviolet;
+}
 
-    position: absolute;
+.block {
+  position: absolute;
+  width: 100px;
+  height: 20px;
+  background-color: blue;
 }
 
 .ball {
-    width: 20px;
-    height: 20px;
-    border-radius: 10px;
-    background-color: red;
-
-    position: absolute;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  background-color: red;
 }
